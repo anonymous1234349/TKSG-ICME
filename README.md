@@ -4,7 +4,7 @@
 
 Automated radiology report generation is crucial in clinical practice, yet diagnosing radiological images typically requires 5-10 minutes from physicians, wasting valuable healthcare resources. Existing studies have not fully utilize knowledge from historical radiology reports, lacking sufficient and accurate prior information. To address this, we propose a Topic-Keyword Semantic Guidance (TKSG) framework. This framework uses BiomedCLIP to accurately retrieve historical similar cases. Supported by multimodal, TKSG accurately detects topic words (disease classifications) and keywords (common symptoms) in diagnoses. The probabilities of topic terms are aggregated into a topic vector, serving as global information to guide the entire decoding process. Additionally, a semantic-guided attention module is designed to refine local decoding with keyword content, ensuring report accuracy and relevance. Experimental results show that our model achieves excellent performance on both IU X-Ray and MIMIC-CXR datasets.
 
-![image-20241221165326917](data/architecture.png)
+![image-20241221165326917](architecture.png)
 
 ## Requirements
 
