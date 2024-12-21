@@ -59,7 +59,7 @@ class BaseDataset(Dataset):
             self.preprocess = transforms.Compose([
                                 transforms.Resize(224, interpolation=Image.BICUBIC, antialias=True),
                                 transforms.CenterCrop(224),
-                                transforms.Lambda(lambda image: image.convert('RGB')),  # 等效于 _convert_image_to_rgb
+                                transforms.Lambda(lambda image: image.convert('RGB')),  
                                 transforms.ToTensor(),
                                 transforms.Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))
                             ])
