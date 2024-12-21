@@ -22,7 +22,7 @@ device = torch.device('cuda:0') if torch.cuda.is_available() else torch.device('
 model.to(device)
 
 dataset_name = 'mimic_cxr-512'  # iu_xray-finetune
-# 读取json
+
 json_file_path = f'/dataset/{dataset_name}/annotation.json'
 image_dir = f'/dataset/{dataset_name}/images/'
 image_feat_path = f'/dataset/{dataset_name}/MedCLIP_image.npz'
