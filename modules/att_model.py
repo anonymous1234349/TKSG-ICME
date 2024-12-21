@@ -169,7 +169,7 @@ class AttModel(CaptionModel):
         decoding_constraint = opt.get('decoding_constraint', 0)
         block_trigrams = opt.get('block_trigrams', 0)
         if beam_size > 1 and sample_method in ['greedy', 'beam_search']:
-            return self._sample_beam(fc_feats, att_feats, att_masks, opt, global_guide=global_guide, local_guide=local_guide,topic=topic) # 改，114
+            return self._sample_beam(fc_feats, att_feats, att_masks, opt, global_guide=global_guide, local_guide=local_guide,topic=topic) 
         if group_size > 1:
             return self._diverse_sample(fc_feats, att_feats, att_masks, opt)
 
