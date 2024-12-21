@@ -1,6 +1,6 @@
 # pip install transformers==4.35.2
-# 运行：HF_ENDPOINT=https://hf-mirror.com python BiomedCLIP_extract_report.py
-# 参考：https://github.com/mlfoundations/open_clip
+# run：HF_ENDPOINT=https://hf-mirror.com python BiomedCLIP_extract_report.py
+# reference：https://github.com/mlfoundations/open_clip
 from open_clip import create_model_from_pretrained, get_tokenizer # works on open-clip-torch>=2.23.0, timm>=0.9.8
 import torch
 from urllib.request import urlopen
