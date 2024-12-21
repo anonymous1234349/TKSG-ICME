@@ -32,7 +32,7 @@ We used `BiomedCLIP` to retrieve similar historical cases with the following env
 pip install transformers==4.35.2 -i https://pypi.mirrors.ustc.edu.cn/simple
 ```
 
-First, extract image and report features.
+First, extract image and report features:
 
 ```
 HF_ENDPOINT=https://hf-mirror.com python tools/BiomedCLIP_extract_image.py 
@@ -42,7 +42,7 @@ HF_ENDPOINT=https://hf-mirror.com python tools/BiomedCLIP_extract_image.py
 HF_ENDPOINT=https://hf-mirror.com python tools/BiomedCLIP_extract_report.py
 ```
 
-Next, retrieve similar historical reports.
+Next, retrieve similar historical reports:
 
 ```
 python tools/retrieval.py
@@ -50,7 +50,6 @@ python tools/retrieval.py
 
 For more information about [BiomedCLIP](https://huggingface.co/ZiyueWang/biomedclip), [MedCLIP](https://github.com/RyanWangZf/MedCLIP), and [CLIP](https://github.com/openai/CLIP), please refer to their respective links.
 
-For the convenience of future research and reproducibility, we also provide the results retrieved using `CLIP`, `MedCLIP`, and `BiomedCLIP` for [similar historical cases]().
 
 ## Pseudo Label Generation 
 
