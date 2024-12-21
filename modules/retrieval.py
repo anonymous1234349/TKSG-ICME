@@ -13,7 +13,7 @@ class Retrieval(nn.Module):
         self.image_encoder = nn.Linear(2048, output_dim)
         self.report_encoder = nn.Linear(input_dim, output_dim)
 
-        self.concept_dector = nn.Linear(2*output_dim,  self.concept_num) # 新加
+        self.concept_dector = nn.Linear(2*output_dim,  self.concept_num) 
         # self.linear = nn.Linear(512, self.concept_num)
 
         if self.global_guide:
@@ -45,7 +45,7 @@ class Retrieval(nn.Module):
         global_guide = None
         if self.global_guide:
             global_guide = self.global_linear(probabilities)  # retrieval_feat
-        value, local_index = torch.topk(probabilities, k=self.concept_topk, dim=1, largest=True, sorted=True)  # 选出前topk个单词
+        value, local_index = torch.topk(probabilities, k=self.concept_topk, dim=1, largest=True, sorted=True)
 
         # local_guide = self.local_embedding(local_index)
 
