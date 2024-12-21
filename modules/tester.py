@@ -117,11 +117,10 @@ class Tester(BaseTester):
                 ground_truths = self.model.tokenizer.decode_batch(reports_ids[:, 1:].cpu().numpy())
                 test_res.extend(reports)
                 test_gts.extend(ground_truths)
-            ######################### 保存为json
+
             keywords_savePath = os.path.join(self.save_dir, 'keywords.json')
             with open(keywords_savePath, 'w') as json_file:
                 json.dump(guide, json_file, indent=4)
-            ######################### 保存为json
 
             test_met = self.metric_ftns({i: [gt] for i, gt in enumerate(test_gts)},
                                         {i: [re] for i, re in enumerate(test_res)})
