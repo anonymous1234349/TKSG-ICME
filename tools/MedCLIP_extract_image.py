@@ -1,9 +1,7 @@
-# 运行：HF_ENDPOINT=https://hf-mirror.com python MedCLIP_extract_image.py
-# 参考：https://github.com/RyanWangZf/MedCLIP
-# 安装nltk：pip install -U nltk
+# run：HF_ENDPOINT=https://hf-mirror.com python MedCLIP_extract_image.py
+# reference：https://github.com/RyanWangZf/MedCLIP
+# install nltk：pip install -U nltk
 # pip install transformers>=4.23.1,<=4.24.0
-# 不按照transformer版本可能会报错:
-# Unexpected key(s) in state_dict: "text_model.model.embeddings.position_ids".
 from medclip import MedCLIPModel, MedCLIPVisionModelViT, MedCLIPVisionModel
 from medclip import MedCLIPProcessor
 import torch
