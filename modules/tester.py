@@ -81,10 +81,7 @@ class Tester(BaseTester):
         log = dict()
         with torch.no_grad():
             test_gts, test_res = [], []
-            # for batch_idx, (images_id, images, reports_ids, reports_masks) in tqdm(enumerate(self.test_dataloader)):
-            #     images, reports_ids, reports_masks = images.to(self.device), reports_ids.to(
-            #         self.device), reports_masks.to(self.device)
-            #     output, _ = self.model(images, mode='sample')
+
             for batch_idx, (images_id, images, reports_ids, reports_masks, retrieval_image_feat, retrieval_report_feat, mask, concept_targets, topic_targets) in enumerate(self.test_dataloader):
                 images, reports_ids, reports_masks = images.to(self.device), reports_ids.to(self.device), reports_masks.to(self.device)
                 if self.retrieval:
