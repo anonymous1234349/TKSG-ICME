@@ -1,5 +1,5 @@
-# 运行：HF_ENDPOINT=https://hf-mirror.com python MedCLIP_extract_report.py
-# 参考：https://github.com/RyanWangZf/MedCLIP
+# run：HF_ENDPOINT=https://hf-mirror.com python MedCLIP_extract_report.py
+# reference：https://github.com/RyanWangZf/MedCLIP
 from medclip import MedCLIPModel, MedCLIPVisionModelViT, MedCLIPVisionModel
 from medclip import MedCLIPProcessor
 import torch
@@ -20,7 +20,7 @@ model.to(device)
 model.from_pretrained()
 
 dataset_name = 'mimic_cxr-512'  # iu_xray-finetune
-# 读取json
+
 json_file_path = f'/home2/hongfei/dataset/{dataset_name}/annotation.json'
 report_feat_path = f'/home2/hongfei/dataset/{dataset_name}/MedCLIP_report.npz'
 print('annotation path:', json_file_path)
