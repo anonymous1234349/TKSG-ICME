@@ -17,8 +17,8 @@ model.eval()
 
 dataset_name = 'mimic_cxr-512'  # iu_xray-finetune
 # 读取json
-json_file_path = f'/home2/hongfei/dataset/{dataset_name}/annotation.json'
-report_feat_path = f'/home2/hongfei/dataset/{dataset_name}/BiomedCLIP_report.npz'
+json_file_path = f'/dataset/{dataset_name}/annotation.json'
+report_feat_path = f'/dataset/{dataset_name}/BiomedCLIP_report.npz'
 print('annotation path:', json_file_path)
 print('image feats save path:', report_feat_path)
 
@@ -33,7 +33,7 @@ for split in ['train','val','test']:
         if dataset_name == 'mimic-cxr':
             id_report.update({i['image_path'][0]:i['report']})
 
-images = preprocess(Image.open('/home2/hongfei/dataset/iu_xray-finetune/images/CXR1000_IM-0003/0.png')).unsqueeze(0).to(device)
+images = preprocess(Image.open('/dataset/iu_xray-finetune/images/CXR1000_IM-0003/0.png')).unsqueeze(0).to(device)
 text_feats = {}
 for report_id, report_text in tqdm(id_report.items()):
     with torch.no_grad():
