@@ -21,8 +21,8 @@ model.from_pretrained()
 
 dataset_name = 'mimic_cxr-512'  # iu_xray-finetune
 
-json_file_path = f'/home2/hongfei/dataset/{dataset_name}/annotation.json'
-report_feat_path = f'/home2/hongfei/dataset/{dataset_name}/MedCLIP_report.npz'
+json_file_path = f'/dataset/{dataset_name}/annotation.json'
+report_feat_path = f'/dataset/{dataset_name}/MedCLIP_report.npz'
 print('annotation path:', json_file_path)
 print('image feats save path:', report_feat_path)
 
@@ -36,8 +36,7 @@ for split in ['train','val','test']:
 
 text_feats = {}
 for report_id, report_text in tqdm(id_report.items()):
-    input = processor(images=Image.open("/home2/hongfei/dataset/iu_xray-finetune/images/CXR1000_IM-0003/0.png"), text=[report_text],return_tensors="pt").to(device)
-    # images1 = processor(Image.open('/home/users/liuhf/Dataset/iu_xray/images/'+data[1]),return_tensors="pt").to(device)
+    input = processor(images=Image.open("/dataset/iu_xray-finetune/images/CXR1000_IM-0003/0.png"), text=[report_text],return_tensors="pt").to(device)
     with torch.no_grad():
         output = model(**input)#.squeeze().cpu().numpy()
         text_embeds = output['text_embeds'].detach().cpu().numpy()  # (1, 512)
