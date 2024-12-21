@@ -49,17 +49,6 @@ class CaptionModel(nn.Module):
         # does one step of classical beam search
 
         def beam_step(logprobs, unaug_logprobs, beam_size, t, beam_seq, beam_seq_logprobs, beam_logprobs_sum, state):
-            # INPUTS:
-            # logprobs: probabilities augmented after diversity N*bxV
-            # beam_size: obvious
-            # t        : time instant
-            # beam_seq : tensor contanining the beams
-            # beam_seq_logprobs: tensor contanining the beam logprobs
-            # beam_logprobs_sum: tensor contanining joint logprobs
-            # OUPUTS:
-            # beam_seq : tensor containing the word indices of the decoded captions Nxbxl
-            # beam_seq_logprobs : log-probability of each decision made, NxbxlxV
-            # beam_logprobs_sum : joint log-probability of each beam Nxb
 
             batch_size = beam_logprobs_sum.shape[0]
             vocab_size = logprobs.shape[-1]
@@ -218,17 +207,6 @@ class CaptionModel(nn.Module):
         # does one step of classical beam search
 
         def beam_step(logprobsf, unaug_logprobsf, beam_size, t, beam_seq, beam_seq_logprobs, beam_logprobs_sum, state):
-            # INPUTS:
-            # logprobsf: probabilities augmented after diversity
-            # beam_size: obvious
-            # t        : time instant
-            # beam_seq : tensor contanining the beams
-            # beam_seq_logprobs: tensor contanining the beam logprobs
-            # beam_logprobs_sum: tensor contanining joint logprobs
-            # OUPUTS:
-            # beam_seq : tensor containing the word indices of the decoded captions
-            # beam_seq_logprobs : log-probability of each decision made, same size as beam_seq
-            # beam_logprobs_sum : joint log-probability of each beam
 
             ys, ix = torch.sort(logprobsf, 1, True)
             candidates = []
