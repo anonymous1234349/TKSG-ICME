@@ -44,7 +44,6 @@ for data in tqdm(image_path):
         if dataset_name == 'iu_xray-finetune':
             input0 = processor(images=Image.open(image_dir + data[0]), text=[""], return_tensors="pt").to(device)
             input1 = processor(images=Image.open(image_dir + data[1]), text=[""], return_tensors="pt").to(device)
-            # images1 = processor(Image.open('/home/users/liuhf/Dataset/iu_xray/images/'+data[1]),return_tensors="pt").to(device)
             output0 = model(**input0)#.squeeze().cpu().numpy()
             img_embeds0 = output0['img_embeds'].cpu().detach().numpy()
             image_feat.update({data[0]:img_embeds0})
