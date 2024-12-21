@@ -36,7 +36,7 @@ pip install transformers==4.35.2 -i https://pypi.mirrors.ustc.edu.cn/simple
 HF_ENDPOINT=https://hf-mirror.com python BiomedCLIP_extract_image.py 
 ```
 
-More detailed information on `BiomedCLIP` can be found at https://github.com/mlfoundations/open_clip
+More detailed information on `BiomedCLIP` can be found at [https://github.com/mlfoundations/open_clip](https://github.com/mlfoundations/open_clip)
 
 For the convenience of future research and reproducibility, we also provide the results retrieved using `CLIP`, `MedCLIP`, and `BiomedCLIP` for [similar historical cases]().
 
