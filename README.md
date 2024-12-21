@@ -44,7 +44,7 @@ For the convenience of future research and reproducibility, we also provide the 
 
 You can generate the pesudo label for each dataset by leveraging the automatic labeler [ChexBert](https://github.com/stanfordmlgroup/CheXbert).
 
-For the convenience of future research and reproducibility, we also provide the [generated labels](https://pan.baidu.com/s/1tTVpNlu-dnOcy2Thrjk1Hw?pwd=1234).
+For the convenience of future research and reproducibility, we also provide the [generated labels](https://drive.google.com/drive/folders/1KGkSi0GuYnqILCJOBGEy754dh6O8VK4S?usp=drive_link).
 
 ## Train
 
