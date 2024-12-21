@@ -79,7 +79,7 @@ class AttModel(CaptionModel):
                 (nn.Linear(self.att_feat_size, self.input_encoding_size),
                  nn.ReLU(),
                  nn.Dropout(self.drop_prob_lm)) +
-                ((nn.BatchNorm1d(self.input_encoding_size),) if self.use_bn == 2 else ()))) # 无BatchNorm1d
+                ((nn.BatchNorm1d(self.input_encoding_size),) if self.use_bn == 2 else ()))) 
 
     def clip_att(self, att_feats, att_masks):
         # Clip the length of att_masks and att_feats to the maximum length
