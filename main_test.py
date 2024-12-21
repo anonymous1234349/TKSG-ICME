@@ -15,7 +15,7 @@ def parse_agrs():
     # other
     parser.add_argument('--topic', action='store_true', help='disease topic')
     parser.add_argument('--topic_path', type=str,
-                        default='/data/iu_xray/labels_14_XProNet_iu.json',
+                        default='/data/iu_xray/labels_IU_X-ray.json',
                         help='disease topic path')
     parser.add_argument('--report_topk', type=int, default=20, help='Concept Numbers')  
     parser.add_argument('--concept_num', type=int, default=300, help='Concept Numbers')
