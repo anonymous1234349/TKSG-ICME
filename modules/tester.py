@@ -97,7 +97,6 @@ class Tester(BaseTester):
                 images_id_list = list(images_id)
                 if self.retrieval:
                     value, local_index = torch.topk(probabilities, k=self.concept_topk, dim=1, largest=True, sorted=True)
-                    # 生成guide word
 
                     value_list = list(value.detach().cpu().numpy())
                     value_list = [array.tolist() for array in value_list]
