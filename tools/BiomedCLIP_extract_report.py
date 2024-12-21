@@ -16,7 +16,7 @@ model.to(device)
 model.eval()
 
 dataset_name = 'mimic_cxr-512'  # iu_xray-finetune
-# 读取json
+
 json_file_path = f'/dataset/{dataset_name}/annotation.json'
 report_feat_path = f'/dataset/{dataset_name}/BiomedCLIP_report.npz'
 print('annotation path:', json_file_path)
