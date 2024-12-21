@@ -1,4 +1,4 @@
-# 参考：https://github.com/mlfoundations/open_clip
+# reference：https://github.com/mlfoundations/open_clip
 import torch
 from PIL import Image
 import json
