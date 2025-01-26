@@ -55,7 +55,7 @@ For more information about [BiomedCLIP](https://huggingface.co/ZiyueWang/biomedc
 
 You can generate the pesudo label for each dataset by leveraging the automatic labeler [ChexBert](https://github.com/stanfordmlgroup/CheXbert).
 
-For the convenience of future research and reproducibility, we also provide the [generated labels](https://drive.google.com/drive/folders/1KGkSi0GuYnqILCJOBGEy754dh6O8VK4S?usp=drive_link).
+For the convenience of future research and reproducibility, we also provide the generated labels.
 
 ## Train
 
